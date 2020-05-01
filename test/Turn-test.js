@@ -1,13 +1,10 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', function() {
-  let turn;
-  let turn2;
-  let card;
+  let turn, turn2, card;
 
   beforeEach(function() {
     turn = new Turn('array', card);
