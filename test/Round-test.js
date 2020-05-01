@@ -1,16 +1,11 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 
 describe('Round', function() {
-  let deck;
-  let round;
-  let card1;
-  let card2;
-  let card3;
+  let deck, round, card1, card2, card3;
 
   beforeEach(function() {
     card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter')
