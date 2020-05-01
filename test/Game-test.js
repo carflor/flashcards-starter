@@ -1,16 +1,12 @@
 const chai = require('chai');
 const expect = chai.expect;
-const Card = require('../src/Card');
+const Game = require('../src/Game');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
+const Card = require('../src/Card');
 
-describe('Game', function() {\
-  let game;
-  let deck;
-  let round;
-  let card1;
-  let card2;
-  let card3;
+describe('Game', function() {
+  let game, deck, round, card1, card2, card3;
 
   beforeEach(function() {
     card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter')
@@ -22,9 +18,12 @@ describe('Game', function() {\
   })
 
   it('should be a function', function() {
-    expect(Round).to.be.a('function');
+    expect(Game).to.be.a('function')
   })
 
-  
+  it('should be an instance of Game', function() {
+    expect(game).to.be.an.instanceof(Game)
+  })
 
-})
+
+});
