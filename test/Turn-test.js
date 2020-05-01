@@ -12,7 +12,7 @@ describe('Turn', function() {
   beforeEach(function() {
     turn = new Turn('array', card);
     turn2 = new Turn('object', card)
-    card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
   })
 
   it('should be a function', function() {
