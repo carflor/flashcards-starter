@@ -4,10 +4,7 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 
 describe('Deck', function() {
-  let deck;
-  let deck2;
-  let card1;
-  let card2;
+  let deck, deck2, card1, card2;
 
   beforeEach(function() {
     deck = new Deck([card1, card2])
