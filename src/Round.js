@@ -25,12 +25,10 @@ class Round {
   }
   
   endRound() {
-    // if (this.deck.length === this.turns) {
     const endMessage = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
     console.log(endMessage)
     return endMessage
   }
-  // }
 }
 
 module.exports = Round; 
