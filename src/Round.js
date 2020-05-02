@@ -17,6 +17,7 @@ class Round {
       this.wrongGuesses.push(turn.card.id)
     }
     this.turns++
+    return turn.giveFeedback()
   }
 
   calculatePercentCorrect() {
