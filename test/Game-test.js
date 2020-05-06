@@ -31,19 +31,12 @@ describe('Game', function() {
     expect(game.currentRound).to.deep.equal(null)
     game.start()
     expect(game.currentRound).to.be.an.instanceof(Round)
-    expect(game.currentRound.round.turns).to.equal(1)
+    game.currentRound.takeTurn('sea otter')
+    expect(game.currentRound.turns).to.equal(1)
   })
 
   it('should be able to acccess a deck on game start', function() {
     game.start()
     expect(game.currentRound.deck.countCards()).to.equal(30)
   })
-
-  // it('should be able to print a welcome message', function() {
-  //   game.start()
-  //   expect(game.printMessage()).to.be(console.log(`Welcome to FlashCards! You are playing with ${this.deck.countCards()} cards.
-  //   -----------------------------------------------------------------------`))
-  // })
-
-  // how do i test for the util.main(round)
 });
