@@ -8,14 +8,11 @@ const Card = require('../src/Card')
 class Game {
   constructor() {
     this.currentRound = null;
-    // this.currentRound = 0;
   }
 
   start() {
     const allCards = prototypeQuestions.map(card => new Card(card.id, card.question, card.answers, card.correctAnswer))
     const deck = new Deck(allCards);
-    // const round = new Round(deck);
-    // this.currentRound++;
     this.currentRound = new Round(deck);
     this.printMessage(deck, this.currentRound);
     this.printQuestion(this.currentRound);
