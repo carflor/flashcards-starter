@@ -27,10 +27,21 @@ class Round {
     return  Math.floor((answeredRight / this.turns) * 100)
   }
   
-  endRound() {
+  calculateRoundTime() {
     const endTime = Date.now()
     const totalTime = endTime - this.startTime
-    const endMessage = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly in ${Math.floor(totalTime / 1000)} seconds!`
+    const totalSeconds = Math.floor(totalTime / 1000)
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds - minutes * 60;
+    if (minutes === 1) {
+      return `${minutes} minute and ${seconds} seconds`
+    } else {
+      return `${minutes} minutes and ${seconds} seconds`
+    }
+  }
+
+  endRound() {
+    const endMessage = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly in ${this.calculateRoundTime()}!`
     console.log(endMessage)
     return endMessage
   }
