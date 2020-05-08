@@ -69,11 +69,11 @@ describe('Round', function() {
     round.takeTurn('listening to music')
     expect(round.calculatePercentCorrect()).to.deep.equal(33)
   })
-
+  
   it('should show end of round message', function() {
     round.takeTurn('sea otter')
-    round.takeTurn('appendix')
-    round.takeTurn('listening to music')
+    round.takeTurn('gallbladder')
+    round.takeTurn('playing with bubble wrap')
     expect(round.endRound()).to.deep.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly in 0 minutes and 0 seconds!`)
   })
 });
