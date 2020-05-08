@@ -45,8 +45,7 @@ describe('Round', function() {
   it('should keep track of duration of round', function() {
     expect(round.startTime).to.equal(Date.now())
     round.endRound()
-    expect(round.endRound()).to.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly in 0 seconds!`)
-
+    expect(round.endRound()).to.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly in ${round.calculateRoundTime()}!`)
   })
 
   it('should return the current card ', function() {
@@ -74,6 +73,6 @@ describe('Round', function() {
     round.takeTurn('sea otter')
     round.takeTurn('appendix')
     round.takeTurn('listening to music')
-    expect(round.endRound()).to.deep.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly in 0 seconds!`)
+    expect(round.endRound()).to.deep.equal(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly in 0 minutes and 0 seconds!`)
   })
 });
