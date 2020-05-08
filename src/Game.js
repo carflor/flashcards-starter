@@ -13,7 +13,7 @@ class Game {
   start() {
     const allCards = prototypeQuestions.map(card => new Card(card.id, card.question, card.answers, card.correctAnswer))
     const deck = new Deck(allCards);
-    this.currentRound = new Round(deck);
+    this.currentRound = new Round(deck, this);
     this.printMessage(deck, this.currentRound);
     this.printQuestion(this.currentRound);
   }

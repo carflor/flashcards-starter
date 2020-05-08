@@ -2,7 +2,8 @@ const Turn = require('../src/Turn');
 const Game = require('../src/Game');
 
 class Round {
-  constructor(deck) {
+  constructor(deck, game) {
+    this.game = game;
     this.deck = deck;
     this.turns = 0;
     this.wrongGuesses = [];
