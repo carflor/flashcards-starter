@@ -41,9 +41,14 @@ class Round {
   }
 
   endRound() {
-    const endMessage = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly in ${this.calculateRoundTime()}!`
-    console.log(endMessage)
-    return endMessage
+    if (this.calculatePercentCorrect() < 90) {
+      console.log(`You need to score over 90% to win the game`)
+      this.game.start()
+    } else {
+      const endMessage = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly in ${this.calculateRoundTime()}!`
+      console.log(endMessage)
+      return endMessage
+    }
   }
 }
 
